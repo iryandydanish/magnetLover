@@ -1,4 +1,4 @@
-# magnetLover
+# magnetLover [WIP]
 This python script will use Telegram Bot &amp; TorBox API to convert magnet links to downloadable links.
 
 This repository is created to split python scripts from ApartmentLab deployment scripts.
