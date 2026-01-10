@@ -18,6 +18,7 @@ if not env_path.exists():
 load_dotenv(env_path)
 magnet = os.getenv('MAGNET_TEST')
 TELE_BOT_TOKEN = os.getenv('TELE_BOT_TOKEN')
+BIG_BUG_MAGNET = os.getenv('BIG_BUG_MAGNET')
 
 INLINE_KB  = InlineKeyboardMarkup([
     [InlineKeyboardButton("Example Magnet (Big Buck Bunny)", callback_data="EXAMPLE_BBB")],
@@ -34,7 +35,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def message_handler(update, context):
     receivedMessage = update.message.text
     if receivedMessage == "Example Magnet (Big Buck Bunny)":
-        receivedMessage = "magnet:?xt=urn:btih:dd8255ecdc7ca55fb0bbf81323d87062db1f6d1c&dn=Big Buck Bunny"
+        receivedMessage = f"{BIG_BUG_MAGNET}"
     
     get_torrent = get_torrentID(receivedMessage)
     downloadLink = get_torrentDownload(get_torrent['torrentID'])

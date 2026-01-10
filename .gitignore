@@ -1,2 +1,4 @@
 ## PROD Credentials Grabber ##
 /gitops/env/prod/*
+/python_scripts/tele_magnet_download/__pycache__
+.venv/
